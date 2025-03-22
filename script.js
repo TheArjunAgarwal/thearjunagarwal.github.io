@@ -3,7 +3,6 @@ fetch('content.md')
   .then(md => {
     const data = parseMarkdown(md);
 
-    document.getElementById('name').textContent = data.name;
     document.getElementById('intro').textContent = data.intro;
     document.getElementById('position').textContent = data.current_position;
     document.getElementById('graduation').textContent = data.expected_graduation;
@@ -22,24 +21,22 @@ fetch('content.md')
 
     const presContainer = document.getElementById('presentations');
     data.presentations.forEach(p => {
-      const pres = document.createElement('div');
-      pres.innerHTML = `
-        <h3>${p.title}</h3>
-        <p><strong>${p.event}</strong> – ${p.date}${p.redelivery ? ` (also: ${p.redelivery})` : ''}</p>
-        ${p.slides ? `<a href="${p.slides}" target="_blank">View Slides</a><br/>` : ''}
-        <p>${p.abstract}</p>
-      `;
-      presContainer.appendChild(pres);
+      const el = document.createElement('div');
+      el.innerHTML = `<h3>${p.title}</h3>
+        <p><em>${p.event}</em> – ${p.date}${p.redelivery ? ` (also: ${p.redelivery})` : ''}</p>
+        ${p.slides ? `<a href="${p.slides}" target="_blank">🪄 View Slides</a>` : ''}
+        <p>${p.abstract}</p>`;
+      presContainer.appendChild(el);
     });
 
     const handoutList = document.getElementById('handout-list');
     data.handouts.forEach(h => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="${h.file}" download>${h.title}</a>: ${h.description}`;
+      li.innerHTML = `<a href="${h.file}" download>${h.title}</a> — ${h.description}`;
       handoutList.appendChild(li);
     });
 
-    console.log("🎉 Congrats, you found the easter egg! Ping me with the phrase 'I found the egg' for a cookie 🍪");
+    console.log("🧙‍♂️ Aha! You peeked behind the scroll. Type ‘Reveal Arjun’ to summon a secret.");
   });
 
 function parseMarkdown(md) {
@@ -49,7 +46,6 @@ function parseMarkdown(md) {
 
   lines.forEach(line => {
     if (line.startsWith('#')) return;
-
     if (/^\s*- title:/.test(line)) {
       current = line.includes('presentations') ? 'presentations' : 'handouts';
       if (!data[current]) data[current] = [];
@@ -68,8 +64,13 @@ function parseMarkdown(md) {
   return data;
 }
 
-// Theme Toggle
+// Potion Toggle
 const toggleBtn = document.getElementById("toggle-theme");
+let toggleCount = 0;
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  toggleCount++;
+  if (toggleCount === 3) {
+    alert("🪄 You have unlocked Nerd Mode™. The potion bubbles with approval.");
+  }
 });
