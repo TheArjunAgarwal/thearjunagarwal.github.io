@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Arjun Maneesh Agarwal</title>
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="app.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arjun Maneesh Agarwal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="title-section">
+      <img src="assets/arjun.jpg" alt="Arjun Agarwal" class="profile-img" />
+      <div>
+        <h1 id="name"></h1>
+        <p id="intro" class="typewriter"></p>
+        <button id="toggle-theme" aria-label="Toggle Theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <ul>
+        <li><strong>Current Position:</strong> <span id="position"></span></li>
+        <li><strong>Graduation:</strong> <span id="graduation"></span></li>
+        <li><strong>Research Focus:</strong> <span id="research"></span></li>
+        <li><strong>Hobbies:</strong> <span id="hobbies"></span></li>
+        <li><strong>Quote:</strong> <q id="quote"></q></li>
+      </ul>
+      <a id="cv-link" class="button" href="" download>📄 Download CV</a>
+    </section>
+
+    <section id="talks">
+      <h2>Talks & Conferences</h2>
+      <div id="presentations"></div>
+    </section>
+
+    <section id="handouts">
+      <h2>Handouts</h2>
+      <ul id="handout-list"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Office:</strong> <span id="office"></span></p>
+      <p><strong>Newsletter:</strong> <a id="newsletter" href="" target="_blank">Read here</a></p>
+      <ul class="socials">
+        <li><a id="ig" href="" target="_blank">Instagram</a></li>
+        <li><a id="gh" href="" target="_blank">GitHub</a></li>
+        <li><a id="li" href="" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p id="signature"></p>
+    <!-- 🥚 Easter Egg Hint: There's a special comment in style.css -->
+  </footer>
+</body>
 </html>
