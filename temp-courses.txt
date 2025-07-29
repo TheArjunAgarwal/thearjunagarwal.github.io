@@ -1,0 +1,38 @@
+{{/*  
+TEMPLATE for courses.html
+<div class="course-item">
+  <div class="course-title">Advanced Course Name</div>
+  <span class="prof">Prof. Professor Name with TAs</span>
+  <span class="textbook">Textbook: Primary Textbook Title by Author</span>
+  <div class="course-description">
+    Main course description and recommendations.
+    <br><br>
+    Additional notes or warnings about the course.
+  </div>
+  <div class="links-section">
+    <a href="path/to/file.pdf" target="_blank">Quiz 1</a>
+    <a href="path/to/file.pdf" target="_blank">Quiz 2</a>
+    <a href="path/to/file.pdf" target="_blank">Midsem</a>
+    <a href="path/to/file.pdf" target="_blank">Endsem</a>
+    <a href="path/to/handout.pdf" target="_blank" class="special-notes-link">My Handout</a>
+  </div>
+  
+  <!-- Optional: Additional Resource Section -->
+  <div class="resource-subsection">
+    <div class="resource-title">Additional Resources</div>
+    <div class="links-section">
+      <a href="https://example.com" target="_blank" class="special-notes-link">Helpful Website</a>
+      <a href="https://youtube.com/watch?v=..." target="_blank" class="special-notes-link">Video Tutorial</a>
+    </div>
+  </div>
+  
+  <!-- Optional: Another Resource Section -->
+  <div class="resource-subsection">
+    <div class="resource-title">Recommended Reading</div>
+    <div class="links-section">
+      <a href="path/to/book.pdf" target="_blank" class="special-notes-link">Alternative Textbook</a>
+    </div>
+  </div>
+</div>  
+
+*/}}
