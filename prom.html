@@ -109,49 +109,18 @@
             </div>
         </section>
 
-       <!-- The Form -->
-        <section id="form-section" class="bg-gray-900 rounded-lg p-6 sm:p-8 border-2 border-dashed border-yellow-400">
-             <h2 class="text-3xl font-bold text-center mb-2 text-yellow-300">The Solemn Vow of Non-Violence</h2>
-             <p class="text-center text-gray-400 mb-8">Before you vote 'Yes', you must agree to the terms of my continued safety.</p>
-
-            <form id="prom-pact-form">
-                <!-- IMPORTANT: This hidden input is required by Web3Forms -->
-                <input type="hidden" name="access_key" value="65172639-a02f-4dbb-aa79-5b0d7e21cc59">
-                 <!-- Add a subject line for the emails you receive -->
-                <input type="hidden" name="subject" value="New Prom Pact Submission!">
-                
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
-                    <input type="text" id="name" name="name" class="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-pink-500" required>
-                </div>
-                <div class="mb-6">
-                    <label for="batch" class="block text-sm font-medium text-gray-300 mb-1">Batch (e.g., BSc 2024)</label>
-                    <input type="text" id="batch" name="batch" class="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-pink-500" required>
-                </div>
-
-                <div class="mb-6 bg-gray-800 p-4 rounded-md border border-gray-700">
-                    <div class="flex items-start">
-                        <input id="agreement" name="agreement" type="checkbox" class="h-5 w-5 rounded border-gray-500 bg-gray-600 text-pink-500 focus:ring-pink-600 mt-1" value="yes" required>
-                        <label for="agreement" class="ml-3 text-sm text-gray-300">
-                            <strong>I solemnly swear...</strong> that I, the undersigned, in full possession of my faculties, do hereby agree to participate in the CMI Prom Pact. I understand that the matchmaking algorithm is a complex beast which has no internal bias for or against anyone. I accept that its results are not a guarantee of eternal love, a magical prom night, or even a non-awkward slow dance. I further pledge, on my honour, that should I receive no match, or a match I deem... suboptimal, I will not engage in any acts of retribution, physical or otherwise, against the humble creator of this system. I will accept my fate with grace and dignity, and I will definitely, absolutely, 100% not beat them up.
-                        </label>
-                    </div>
-                </div>
-
-                <button id="submit-button" type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 glow">
-                    I Swear It & I Want The Pact!
-                </button>
-            </form>
-             <div id="thank-you" class="hidden text-center p-8 bg-green-900/50 border-2 border-green-500 rounded-lg">
-                <h3 class="text-3xl font-bold text-green-400">Your Vow Has Been Recorded!</h3>
-                <p class="text-gray-300 mt-2">Thank you for your courage and for guaranteeing my safety. May the algorithm be ever in your favor.</p>
+      <!-- The Form - CLOSED -->
+        <section id="form-section" class="bg-gray-900 rounded-lg p-6 sm:p-8 border-2 border-dashed border-red-400">
+             <h2 class="text-3xl font-bold text-center mb-2 text-red-400">Form Submissions Closed</h2>
+             <p class="text-center text-gray-400 mb-8">Thank you to everyone who promised to not beat me up</p>
+             
+             <div class="text-center p-8 bg-red-900/50 border-2 border-red-500 rounded-lg">
+                <h3 class="text-3xl font-bold text-red-400">The form is Now Closed</h3>
+                <p class="text-gray-300 mt-4">The form has been closed and no new submissions are being accepted. We will have the pact run from <strong>October 5th to 12th and results on 15th.</strong></p>
+                <p class="text-sm text-gray-500 mt-2">If you have any further questions, please reach out to the organizer (Arjun Maneesh Agarwal) directly.</p>
             </div>
-             <div id="error-message" class="hidden text-center p-8 bg-red-900/50 border-2 border-red-500 rounded-lg mt-4">
-                <h3 class="text-3xl font-bold text-red-400">Oops! Something went wrong.</h3>
-                <p class="text-gray-300 mt-2">Couldn't submit the form. Please try again later.</p>
-            </div>
-        </section>
 
+            <form id="prom-pact-form" class="hidden">
     </div>
 
     <script>
