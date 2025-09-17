@@ -1,4 +1,5 @@
 {{/*  
+
 TEMPLATE for courses.html
 <div class="course-item">
   <div class="course-title">Advanced Course Name</div>
