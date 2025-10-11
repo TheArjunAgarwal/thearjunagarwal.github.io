@@ -180,33 +180,40 @@
         </footer>
     </div>
 
-    <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const nameSelect = document.getElementById('name-select');
         const downloadButton = document.getElementById('download-button');
         const errorMessage = document.getElementById('error-message');
 
-        // Fetch the list of names from names.csv
-        fetch('names.csv')
+        // --- Load filenames from goodies/manifest.json ---
+        fetch('goodies/manifest.json')
             .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.text();
+                if (!response.ok) throw new Error('Could not load manifest.json');
+                return response.json();
             })
-            .then(data => {
-                const names = data.trim().split('\n').filter(name => name.trim() !== '');
-                names.forEach(name => {
+            .then(files => {
+                if (!Array.isArray(files) || files.length === 0)
+                    throw new Error('Manifest is empty or invalid');
+
+                // Populate dropdown with clean names (no .csv)
+                files.forEach(file => {
+                    const name = file.replace(/\.csv$/i, '');
                     const option = document.createElement('option');
-                    option.value = name.trim();
-                    option.textContent = name.trim();
+                    option.value = name;
+                    option.textContent = name;
                     nameSelect.appendChild(option);
                 });
             })
             .catch(error => {
-                console.error('Error fetching or parsing names.csv:', error);
+                console.error('Error loading manifest:', error);
                 nameSelect.disabled = true;
-                nameSelect.querySelector('option').textContent = 'Could not load names';
+                const option = document.createElement('option');
+                option.textContent = 'Could not load results';
+                nameSelect.appendChild(option);
             });
 
+        // Enable/disable the download button
         nameSelect.addEventListener('change', () => {
             if (nameSelect.value) {
                 downloadButton.disabled = false;
@@ -216,24 +223,17 @@
             }
         });
 
-        // Handle download click — now case-insensitive
+        // --- Handle download (case-insensitive) ---
         downloadButton.addEventListener('click', async () => {
             const selectedName = nameSelect.value;
             if (!selectedName) return;
 
-            const normalizedName = selectedName.toLowerCase();
-
             try {
-                // Get the list of files in goodies/ (requires directory listing enabled)
-                const goodiesResponse = await fetch('goodies/');
-                const goodiesText = await goodiesResponse.text();
+                const response = await fetch('goodies/manifest.json');
+                const files = await response.json();
 
-                // Extract file names from the directory listing (basic regex)
-                const fileNames = [...goodiesText.matchAll(/href="([^"]+\.csv)"/gi)]
-                    .map(match => match[1]);
-
-                // Find the matching file ignoring case
-                const matchingFile = fileNames.find(
+                const normalizedName = selectedName.toLowerCase();
+                const matchingFile = files.find(
                     file => file.toLowerCase() === `${normalizedName}.csv`
                 );
 
@@ -244,7 +244,7 @@
                 // Trigger download
                 const link = document.createElement('a');
                 link.href = filePath;
-                link.download = `${selectedName}.csv`;
+                link.download = matchingFile;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -257,6 +257,7 @@
         });
     });
 </script>
+
 
 
 </body>
