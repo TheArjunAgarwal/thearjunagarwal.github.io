@@ -1,112 +1,115 @@
 match_name,score
-katha,82.967336
-ritika,78.805168
-keerthana,74.763128
-harshitha,74.513136
-animikha dutta dhar,74.38052
-mohak chugh,74.33112
-aditi,73.763888
-kush mazumdar,73.521896
-surya raju,73.401872
-karshit joshi,72.947888
-karan gupta,72.107432
-adie,71.88172
-harsh,71.685496
-anush rao,71.470352
-sania rawat,71.354576
-ahana mondal,70.515808
-darshan kalita,70.300816
-chiraayu sneha nanda,70.004272
-ankush,69.879128
-shyam patankar,69.531152
-sampriti mahapatra,69.322736
-harish chandramouleeswaran,69.281152
-mandar,68.880112
-titli,68.841784
-anya,68.834112
-sreevani,68.705608
-vincent paul,68.416088
-sunaina pati,67.933984
-uday kanshiya,67.414312
-tejas sah,66.528576
-devika menon,66.281296
-dhruv patil,65.771
-vasudeva,65.71542
-tarun ramesh,65.693244
-chandralekha,65.615016
-priyansu kumar,65.28236
-surya v,65.122016
-anushka,65.00222
-anwess kumar das,64.892892
-arkaprabha chakraborty,64.82372
-gyanashree,64.549232
-tejaswi sherawat,64.539144
-rajarshi ghosh,64.395164
-rhyin mandal,64.101896
-moirangthem titan,63.858796
-chinmayee,63.82736
-aditya padiyar,63.553488
-avishek,63.199888
-chinmaya praveen,63.084484
-abhishek lunagariya,62.557552
-vedant neema,62.263508
-hrishikesh,62.216392
-ojas,61.879196
-aryan srivastava,61.719872
-sourit mitra,61.152764
-shruti patil,61.078088
-shaumik khanna,60.971056
-ritujeet sarkar,60.856648
-kushagra,60.513752
-romit rc,59.689104
-vighnesh sangle,59.387488
-abhisri,59.308056
-ketaki sahasrabudhe,59.170248
-thejas,59.030124
-arjun maneesh agarwal,58.986748
-aadrita paul,58.402312
-anurag gupta,58.343108
-eashan raina,58.213216
-pk,57.922164
-krish,57.694616
-neelabh shome,57.57644
-shreya gupta ray,57.517432
-ayush,57.403048
-gautham v,57.225404
-nirjhar nath,56.745972
-malay prasanna mahajan,56.600712
-abhinandan saha,56.54212
-rajveer singh,56.459204
-ronak agarwal,56.283748
-john,55.767472
-agnes,53.801748
-neel sinha,53.627888
-govind,52.950568
-prachee,52.615016
-deeptaru,52.282956
-soham saha,51.982592
-piyush kumar jha,51.236704
-dhruv,51.21488
-vardhan kumar ray,51.076784
-urjaswi chakraborty,50.931956
-kabir singh,50.879848
-ripudaman singh,50.798464
-mohit,50.741076
-eshan m.j,50.607152
-anusha gupta,50.455884
-debmalya hazra,50.202948
-manami das,49.91038
-shamim akhtar,49.699004
-dhruv patel,49.689532
-trishita,49.506284
-sibasis chowdhury,47.9909
-abhinav anand,47.816296
-om chaudhari,46.686996
-krutarth,46.520536
-ishan biswas,45.352128
-aryan kusre,44.70932
-maria thurkadayil,44.638784
-ishan hegde,44.292232
-rohan roy,44.065472
-qusai nampurwala,41.885824
-abhinav negi,40.383428
+katha,80.022501
+adie,79.785391
+aditi,79.479063
+animikha dutta dhar,79.384562
+arkaprabha chakraborty,78.853868
+gyanashree,78.70179
+surya raju,78.222036
+anush rao,77.984494
+shyam patankar,77.350676
+chiraayu sneha nanda,77.188759
+chinmaya praveen,77.011564
+vasudeva,76.955532
+harshitha,76.950219
+karshit joshi,76.903505
+sania rawat,76.727797
+ritujeet sarkar,76.70366
+sunaina pati,76.64745
+sreevani,76.634646
+shreyasi kar,76.237579
+karan gupta,76.18837
+ahana mondal,76.10694
+ankush,75.98883
+titli,75.91807
+keerthana,75.852109
+anushka,75.688403
+vincent paul,75.612142
+uday kanshiya,75.609982
+rhyin mandal,75.54091
+rajarshi ghosh,75.23982
+shruti patil,75.223647
+mandar,74.910922
+avishek,74.847948
+mohak chugh,74.605608
+tarun ramesh,74.514424
+chandralekha,74.200179
+sampriti mahapatra,74.19892
+aryan srivastava,73.982297
+harsh,73.970662
+romit rc,73.947453
+devika menon,73.830423
+darshan kalita,73.639261
+surya v,73.454739
+ritika,73.358531
+kush mazumdar,73.27496
+kushagra,73.178709
+harish chandramouleeswaran,72.932121
+ojas,72.927333
+tejas sah,72.894916
+abhishek lunagariya,72.847417
+dhruv,72.510122
+anya,72.488961
+dhruv patil,72.210368
+mohit,72.015915
+debmalya hazra,71.980828
+chinmayee,71.796366
+agnes,71.736992
+rajveer singh,71.604732
+malay prasanna mahajan,71.439469
+sourit mitra,71.34436
+moirangthem titan,71.112996
+tejaswi sherawat,71.080654
+nirjhar nath,70.977164
+krish,70.672877
+john,70.422548
+anurag gupta,70.333392
+thejas,70.307322
+arjun maneesh agarwal,70.207724
+priyansu kumar,70.204163
+ayush,70.170606
+abhisri,70.02856
+ketaki sahasrabudhe,69.984904
+eashan raina,69.947922
+anusha gupta,69.742223
+dhruv patel,69.607715
+vedant neema,69.429316
+aadrita paul,69.350971
+shaumik khanna,69.294545
+anwess kumar das,69.168546
+swikriti paul,68.838862
+vighnesh sangle,68.150853
+neelabh shome,68.119778
+saurabh kumar,68.055839
+manami das,67.932295
+om chaudhari,67.874696
+deeptaru,67.807107
+shreya gupta ray,67.798567
+krutarth,67.591103
+piyush kumar jha,67.417909
+hrishikesh,67.029458
+urjaswi chakraborty,67.008224
+ronak agarwal,66.965461
+vardhan kumar ray,66.882442
+eshan m.j,66.738944
+trishita,66.648968
+gautham v,66.391939
+shamim akhtar,66.043539
+neel sinha,65.851814
+rohan roy,65.688013
+prachee,65.686495
+kabir singh,65.63932
+abhinandan saha,65.479821
+abhinav anand,65.203583
+ripudaman singh,64.37389
+aryan kusre,63.952703
+sibasis chowdhury,63.102464
+aditya padiyar,63.038846
+maria thurkadayil,62.498188
+soham saha,62.33622
+govind,61.160244
+qusai nampurwala,59.575607
+pk,57.8165
+ishan biswas,57.727813
+ishan hegde,56.04959
+abhinav negi,47.064907
