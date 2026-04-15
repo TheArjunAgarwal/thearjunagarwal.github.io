@@ -131,3 +131,20 @@ body {
   color: #F0C808;       /* Text color */
 }
 
+details {
+  margin: 10px 0;
+}
+
+details summary {
+  cursor: pointer;
+  color: #007b7f;
+  margin-bottom: 8px;
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
+details[open] summary {
+  margin-bottom: 12px;
+}
