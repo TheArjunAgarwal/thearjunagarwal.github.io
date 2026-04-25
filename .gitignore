@@ -35,4 +35,5 @@ Temporary Items
 *.icloud
 *.key
 100Things/
+new/
 # End of https://www.toptal.com/developers/gitignore/api/macos
