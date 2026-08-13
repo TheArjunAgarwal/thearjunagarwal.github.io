@@ -81,15 +81,15 @@
   }
 
   .section-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    background-color: #cde7d8;
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #cde7d8;
+}
 
-  .section-content.active {
-    max-height: 2000px;
-  }
+.section-content.active {
+  max-height: none;
+}
 
   .course-list {
     padding: 20px;
@@ -287,11 +287,6 @@
     }
 
     /* Better mobile dropdown handling */
-    .section-content.active {
-      max-height: 100vh;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
 
     footer {
       text-align: center;
@@ -327,10 +322,6 @@
 
     .course-description {
       font-size: 8px;
-    }
-
-    .section-content.active {
-      max-height: 90vh;
     }
   }
 
@@ -553,6 +544,46 @@
 
           </div>
           
+          <!-- Algorithms -->
+          <div class="course-item">
+            <div class="course-title">Design and Analysis of Algorithms</div>
+            <span class="prof">Prof. Siddharth Pritam</span>
+            <span class="textbook">CLRS and Jeff Erickson</span>
+            <span class = "year">2025 Fall</span>
+            <div class="course-description">
+              While the course had quizzes, they were 'surprise' in tutorials and classes which were both quite poorly conducted. As a result, I didn't attend most of quizzes. <br>
+              Although, rest assured, most of these were memory based MCQs and didn't really teach or test anything.
+            </div>
+            <div class="links-section">
+              <a href="assets/courses/DAA/ass1.pdf" target="_blank">Assignment 1 (with my solutions)</a>
+              <a href="assets/courses/DAA/ass2.pdf" target="_blank">Assignment 2 (with my solutions)</a>
+              <a href="assets/courses/DAA/ass3.pdf" target="_blank">Assignment 3 (with my solutions)</a>
+              <a href="assets/courses/DAA/midsem.pdf" target="_blank">Midsem</a>
+              <a href="assets/courses/DAA/endsem.pdf" target="_blank">Endsem</a>
+            </div>
+          </div>
+
+          <!-- Theory Of Computation -->
+          <div class="course-item">
+            <div class="course-title">Theory of Computation</div>
+            <span class="prof">Prof. C. Aiswarya</span>
+            <span class="textbook">Automata and Computability by Dexter C. Kozen</span>
+            <span class = "year">2025 Fall</span>
+            <div class="course-description">
+              Prof. Aiswarya also reccomended Sipser although I found it slower and boring in comparision to Kozen (which is one of my favourite textbooks of all time).
+            </div>
+            <div class="links-section">
+              <a href="assets/courses/TOC/ass1.pdf" target="_blank">Assignment 1 (with my solutions)</a>
+              <a href="assets/courses/TOC/ass2.pdf" target="_blank">Assignment 2 (with my solutions)</a>
+              <a href="assets/courses/TOC/quiz1.pdf" target="_blank">Quiz 1</a>
+              <a href="assets/courses/TOC/midsem.pdf" target="_blank">Midsem</a>
+              <a href="assets/courses/TOC/ass3.pdf" target="_blank">Assignment 3 (with my solutions)</a>
+              <a href="assets/courses/TOC/ass4.pdf" target="_blank">Assignment 4 (with my solutions)</a>
+              <a href="assets/courses/TOC/quiz2.pdf" target="_blank">Quiz 2</a>
+              <a href="assets/courses/TOC/endsem.pdf" target="_blank">Endsem</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -620,17 +651,25 @@
 
   <script>
     function toggleSection(sectionId) {
-      const content = document.getElementById(sectionId + '-content');
-      const arrow = document.getElementById(sectionId + '-arrow');
-      
-      if (content.classList.contains('active')) {
-        content.classList.remove('active');
-        arrow.textContent = 'v';
-      } else {
-        content.classList.add('active');
-        arrow.textContent = '^';
-      }
-    }
+  const content = document.getElementById(sectionId + '-content');
+  const arrow = document.getElementById(sectionId + '-arrow');
+
+  if (content.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+
+    // Force the browser to register the current height
+    requestAnimationFrame(() => {
+      content.style.maxHeight = '0px';
+    });
+
+    content.classList.remove('active');
+    arrow.textContent = 'v';
+  } else {
+    content.classList.add('active');
+    content.style.maxHeight = content.scrollHeight + 'px';
+    arrow.textContent = '^';
+  }
+}
 
     // Optional: Open Mathematics section by default
     document.addEventListener('DOMContentLoaded', function() {
